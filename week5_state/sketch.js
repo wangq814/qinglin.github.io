@@ -202,7 +202,7 @@ function drawScene() {
 	  background(255,200,200);
       drawSprite(ghost3);
 	  //reset position  ?
-	    camera.position.x = 100;
+	    camera.position.x = 300;
         camera.position.y = 200;
 		ghost.position.x = 100;
         ghost.position.y = 200;
