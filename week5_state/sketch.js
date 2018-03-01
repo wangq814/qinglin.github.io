@@ -61,7 +61,7 @@ for(var i = 0; i<120; i++) {
   newStar.setCollider ("circle", 0, 0, 10,10); 
 }
  
-ghost = createSprite(300, 200, 50, 50);
+ghost = createSprite(100, 200, 50, 50);
 ghost.setCollider ("rectangle", 0, 0, 80,110); 
 ghost2 = createSprite(2700, 1800,50,50);
 ghost3 = createSprite(300,200, 50,50);
@@ -202,9 +202,9 @@ function drawScene() {
 	  background(255,200,200);
       drawSprite(ghost3);
 	  //reset position  ?
-	    camera.position.x = 300;
+	    camera.position.x = 100;
         camera.position.y = 200;
-		ghost.position.x = 300;
+		ghost.position.x = 100;
         ghost.position.y = 200;
 	 
 	  console.log("WIN!");
@@ -223,10 +223,10 @@ break;
 	  textAlign(CENTER, CENTER);
       text("Click to try again. \n I'll always be there for you ~ ", width/2, height - 100);
 	 //reset , or couldn't play again 
-	  ghost.position.x = 300;
+	  ghost.position.x = 100;
       ghost.position.y = 200;
-	  camera.position.x = ghost.position.x;
-      camera.position.y = ghost.position.y;
+	  camera.position.x = 300;
+      camera.position.y = 200;
 	console.log("LOSE!");
 	  break;
       default:
