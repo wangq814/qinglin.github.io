@@ -27,22 +27,25 @@ let xStep;
 let yStep; 
 let positions = []; 
 
-function preload(){
-	myFont = loadFont('assets/MiasScribblings.ttf');
-	myTitle = loadImage("https://i.imgur.com/FTb0oC6.png");
-	secondPage = loadImage("https://i.imgur.com/K6XGRw3.png");
-	
-}
+//function preload(){
+//	//myFont = loadFont('assets/MiasScribblings.ttf');
+//	myTitle = loadImage("https://i.imgur.com/FTb0oC6.png");
+//	secondPage = loadImage("https://i.imgur.com/K6XGRw3.png");
+//	
+//}
 function setup() {	
  createCanvas(600,400);
  SCENE_W = 3000;
  SCENE_H = 2000;
  numberOfColumns = 39; 
  numberOfRows = 26; 
+
  stars = new Group();
  xStep = SCENE_W/numberOfColumns; 
  yStep = SCENE_H/numberOfRows;
-  
+ myTitle = loadImage("https://i.imgur.com/FTb0oC6.png");
+	secondPage = loadImage("https://i.imgur.com/K6XGRw3.png");
+	
  for(var x = -500; x < SCENE_W + 500; x += xStep){ 
     for(var y = -500; y < SCENE_H + 500; y += yStep){
       let p = createVector(x, y); 
@@ -102,7 +105,8 @@ function drawScene() {
        
 	   image(myTitle,120,120, 385,120);
 	   fill(255);
-       textFont("myFont");
+       //textFont("myFont");
+		  textFont('Comic Sans MS');
        textSize(24);
        textAlign(CENTER, CENTER);
        text("click to continue", width/2, height/2+100);
@@ -114,7 +118,8 @@ function drawScene() {
 	   background(180, 210, 90);
 	   image(secondPage,250,40);
        fill(255);
-       textFont("myFont");
+       //textFont("myFont");
+		 textFont('Comic Sans MS');
        textSize(24);
        textAlign(CENTER, CENTER);
        text("Use mouse to move.\nI'm waiting for you at lower right corner~ \n Remember to AVOID stars \n because I don't want them to steal your heart~", width/2, height/2 + 50);
@@ -213,7 +218,8 @@ break;
 	
 	  textSize(24);
 	  fill(255);
-	  textFont("myFont");
+	  //textFont("myFont");
+		textFont('Comic Sans MS');
 	  textAlign(CENTER, CENTER);
       text("Click to try again. \n I'll always be there for you ~ ", width/2, height - 100);
 	 //reset , or couldn't play again 
